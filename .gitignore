@@ -1,0 +1,80 @@
+# Compiled files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.lb
+
+# Intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+
+# Bibliography files
+*.bbl
+*.blg
+*.brf
+
+# Index files
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Glossary files
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+
+# Nomenclature
+*.nlo
+*.nls
+
+# TikZ & PGF
+*.nav
+*.snm
+*.vrb
+
+# minted package
+_minted*
+*.pyg
+
+# latexmk
+latexmkrc
+
+# arara
+*.arara
+
+# PDF output (opcional)
+# *.pdf
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# TeXstudio / TeXmaker
+*.synctex.gz
