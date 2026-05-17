@@ -1,51 +1,36 @@
 \section{Conclusion}
 
-This review set out to map the current state of AI-based supply chain risk
-mitigation across three dimensions, the mechanisms through which AI is
-applied, the risk categories it addresses, and the techniques it deploys,
-drawing on 19 studies published between 2019 and 2026. What emerges is a
-picture of a field that has grown considerably in both volume and technical
-ambition over a relatively short period, shaped in large part by the
-disruptions of the early 2020s and the data availability those disruptions
-generated.
-
-Across the included studies, early warning and forecasting stands out as
-the most consistently pursued application of AI in supply chain risk
-management, present in roughly 42\% of the corpus. Traditional machine
-learning methods, Random Forest, Support Vector Machines, and gradient
-boosting variants, account for the broadest deployment, owing to their
-suitability for the structured tabular data that dominates operational
-supply chain environments. Deep learning architectures, particularly LSTMs
-and hybrid GNN-LSTM models, appear predominantly in studies dealing with
-disruption and logistics risks, where temporal sequencing and network
-topology carry analytical weight that simpler models cannot capture.
-More recent contributions introduce large language models and multi-agent
-architectures, reflecting a gradual expansion of the techniques considered
-viable for operational risk contexts.
-
-The review also surfaces a number of recurring limitations acknowledged
-by the studies themselves. Coverage of cybersecurity, geopolitical, and
-fraud risks remains thin relative to the attention given to disruption and
-logistics risks. The empirical base is geographically concentrated, with
-a substantial share of studies originating from Asian manufacturing and
-logistics contexts, and with European and North American supply chain
-environments largely absent from primary research. Most proposed models
-are validated on historical batch datasets rather than live operational
-data, a limitation that the authors of several included studies identify
-as a barrier to real-world deployment. Interpretability, too, is widely
-flagged as an unresolved challenge: despite the growing presence of
-SHAP-based methods in recent contributions, the majority of reviewed
-systems do not yet meet the transparency requirements of regulated or
-safety-critical environments.
-
-Future work signalled across the corpus points in several directions:
-empirical validation in longitudinal, real-world settings; integration
-with real-time data infrastructures such as IoT sensors and blockchain
-audit trails; development of sector-specific frameworks for industries
-currently underserved by the literature; and broader geographic coverage
-to establish the cross-contextual generalisability of proposed approaches.
-The field, as documented here, has made substantial progress in
-demonstrating that AI can contribute meaningfully to supply chain risk
-management; the work of establishing how, and under what conditions, that
-contribution holds across diverse operational contexts remains largely
-ahead of it.
+This review mapped the application of artificial intelligence to supply 
+chain risk mitigation across three dimensions the mechanisms deployed, 
+the risk categories addressed, and the techniques employed, drawing on 
+19 empirical and review studies published between 2022 and 2026. 
+The picture that emerges is one of a field advancing rapidly in 
+technical sophistication, yet still uneven in its coverage of risks,
+ sectors, and geographies.
+ 
+Early warning and forecasting dominate. About 42\% of the corpus is
+focused on catching disruption signals before they become crises, rather
+than reacting after damage is done. Traditional machine learning is still
+the most common technique, mostly because it fits the structured tabular
+data that ERP and warehouse systems actually produce. The 2025 papers push
+into hybrid architectures, deep learning combined with graph neural
+networks, or large language models processing unstructured news
+feeds, but those remain the exception rather than the norm.
+ 
+The coverage gaps are substantial. Cybersecurity, geopolitical, and fraud
+risks barely appear across the nineteen studies. The empirical base is
+heavily concentrated in Asian manufacturing; European and North American
+supply chains are almost absent from primary research. Most models are
+validated on historical batch data, not live operational streams, which
+raises obvious questions about real-world early warning capability.
+Interpretability has improved, but not enough for
+regulated or safety-critical contexts where someone needs to explain a
+model's output to an auditor or regulator.
+ 
+The directions for future work follow from these gaps: longitudinal
+validation in real operating environments; architectures that ingest IoT
+and real-time transaction data; frameworks built for sectors that have
+received little attention so far; and empirical studies from geographies
+other than South and East Asia. The technical foundations exist. What the
+field still needs to establish is whether they hold up outside the
+conditions under which they were developed.
