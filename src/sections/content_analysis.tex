@@ -2,7 +2,7 @@
 
 \subsection{Answer to RQ1 — How AI Mitigates Supply Chain Risks}
 
-The analysis of the 19 included articles reveals six distinct mechanisms through which artificial intelligence is applied to mitigate risks in supply chains. Early warning and forecasting constitutes the dominant approach, identified in eight articles (42\%), followed by automation and decision support and resilience and recovery, each present in four articles (21\%). Privacy-preserving collaboration, explainability and transparency (XAI), and conceptual framework or review contributions each account for one article (5\%) respectively.
+The analysis of the 19 included articles reveals six distinct mechanisms through which artificial intelligence is applied to mitigate risks in supply chains. Early warning and forecasting constitutes the dominant approach, identified in eight articles (42\%), followed by automation and decision support and resilience and recovery, each present in four articles (21\%). Privacy-preserving collaboration, explainability and transparency (XAI), and conceptual framework or review contributions each account for one article apiece, together representing the remaining 16\% of the corpus.
 
 \begin{figure}[H]
   \centering
@@ -25,6 +25,7 @@ The analysis of the 19 included articles reveals six distinct mechanisms through
 
 Overall, the dominance of early warning and forecasting reflects an underlying conviction in the literature that the most effective form of supply chain risk management is pre-emptive. The emergence of multi-agent and LLM-based architectures in 2025 articles suggests that the field is beginning to operationalise this logic at higher temporal resolution, moving from batch prediction toward continuous, automated risk surveillance.
 
+% ----------------------------------------
 
 \subsection{Answer to RQ2 — Types of Supply Chain Risks Addressed}
 
@@ -33,7 +34,7 @@ The cross-reference matrix produced from the 19 included articles reveals eight 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{figures/fig_heatmap.png}
-  \caption{Cross-reference matrix of AI techniques and supply chain risk types addressed in the included articles. Cell values indicate the number of articles addressing each combination.}
+  \caption{Cross-reference matrix of AI techniques and supply chain risk types addressed in the included articles. Cell values indicate the number of articles addressing each combination. Empty cells indicate no article in the corpus addresses that particular technique-risk pairing.}
   \label{fig:heatmap}
 \end{figure}
 
@@ -47,8 +48,9 @@ The cross-reference matrix produced from the 19 included articles reveals eight 
 
 \textit{Pandemic risk} receives dedicated attention in three articles through traditional ML, XAI, and Federated Learning, confirming the COVID-19 pandemic as a structuring event for this research stream~\cite{nayal2022exploring,nimmy2022explainability,nguyen2024federated}.
 
-\textit{Geopolitical risk} is addressed in two articles through traditional ML and XAI-based approaches~\cite{aldehayyat2025applying,kumar2023enhancing}. \textit{Fraud and integrity risk} appears in two articles deploying Generative AI and Knowledge Graphs~\cite{lin2025generative,yang2024building}. \textit{Cybersecurity risk} is the least studied category, identified in only one article through a Knowledge Graph-based approach~\cite{yang2024building}, representing a critical gap given the increasing digitalisation of supply chain operations.
+\textit{Geopolitical risk} is addressed in two articles through traditional ML and XAI-based approaches~\cite{aldehayyat2025applying,kumar2023enhancing}. \textit{Fraud and integrity risk} appears in three articles: Generative AI and Knowledge Graphs are applied to fraud detection in supply chain operations~\cite{lin2025generative,yang2024building}, while Federated Machine Learning is specifically deployed for food fraud detection in collaborative supply chain environments~\cite{nguyen2024federated}. \textit{Cybersecurity risk} is the least studied category in the corpus, addressed in two articles through Knowledge Graph-based and Federated Learning approaches~\cite{yang2024building,nguyen2024federated}, a finding that points to a significant gap in a field where supply chain digitalisation is accelerating.
 
+% ----------------------------------------
 
 \subsection{Answer to RQ3 — AI Techniques Used}
 
@@ -62,7 +64,9 @@ The methodological landscape of the 19 included articles encompasses eight disti
 
 \textit{XAI (SHAP/LIME)} is applied across supplier, pandemic, and geopolitical risks, confirming that high-stakes, low-frequency risk decisions create the strongest demand for interpretable AI outputs~\cite{kumar2023enhancing,nimmy2022explainability,li2025endtoend,adom2025design}.
 
-\textit{Bayesian Networks} address disruption, logistics and transport, and demand and inventory risks, providing probabilistic modelling capabilities well-suited to uncertainty quantification under incomplete information~\cite{deivaganesh2022future,naz2022artificial,renuga2026ai}.
+\textit{Bayesian Networks} address disruption, logistics and transport, and demand and inventory risks, providing probabilistic modelling capabilities well-suited to uncertainty quantification under incomplete information~\cite{deivaganesh2022future,nayal2022exploring,renuga2026ai}.
+
+\textit{Natural Language Processing (NLP)} is applied to supply chain risk identification and early warning through text mining, sentiment analysis, and association rule mining on social media and operational data streams~\cite{deivaganesh2022supply,naz2022artificial,yang2025design,rajesh2025smartops,lin2025generative}. These approaches enable the extraction of risk signals from unstructured data sources that structured ML models cannot directly process.
 
 \textit{Generative AI (LLMs)} appears in two articles addressing disruption risk and fraud and integrity risk~\cite{lin2025generative,rajesh2025smartops}, representing the most recent technical development in the corpus and signalling the entry of large language model capabilities into supply chain risk management.
 
@@ -70,13 +74,14 @@ The methodological landscape of the 19 included articles encompasses eight disti
 
 \textit{Federated Learning} addresses supplier, disruption, logistics and transport, and pandemic risks within a single architectural contribution~\cite{nguyen2024federated}, enabling privacy-preserving collaborative risk modelling across organisational boundaries.
 
-A temporal trend is discernible: articles published in 2022 and 2023 predominantly rely on traditional ML and review-based methods, while 2024 and 2025 contributions increasingly deploy hybrid architectures combining Deep Learning, GNNs, Generative AI, and formal optimisation. The appearance of LLMs in two 2025 articles suggests that generative AI capabilities are beginning to be operationalised for supply chain risk management, a trend likely to intensify as domain-specific model fine-tuning becomes more accessible.
+A temporal trend is discernible in the distribution of techniques across the corpus. Of the six articles published in 2022 and 2023, three rely primarily on traditional ML or review-based survey methods, while three already deploy hybrid or multi-technique architectures combining NLP, XAI, and statistical modelling. By contrast, of the thirteen articles published between 2024 and 2026, ten deploy hybrid or advanced architectures combining Deep Learning, GNNs, Generative AI, LLMs, or formal optimisation methods, with only three relying on single-technique approaches. This shift reflects both the maturation of these techniques and the increasing availability of the large, diverse datasets that complex architectures require.
 
+% ----------------------------------------
 
 \subsection{Complementary Analysis}
 
-\textit{Sector concentration.} The majority of included articles propose general or sector-agnostic supply chain models, limiting the ability to draw sector-specific conclusions. Where specific industries are targeted, manufacturing receives the most attention~\cite{yang2025design,li2025endtoend}, followed by logistics and transportation~\cite{le2025crisis,rajesh2025smartops}, agriculture~\cite{nayal2022exploring}, e-commerce and contract logistics~\cite{adom2025design}, and multi-sector contexts including pharmaceuticals, food, and semiconductors~\cite{lin2025generative}. Healthcare, energy, and public sector supply chains are absent from the corpus, representing sectors where AI-based risk management frameworks remain underdeveloped.
+\textit{Sector concentration.} The majority of included articles propose general or sector-agnostic supply chain models, limiting the ability to draw sector-specific conclusions. Where specific industries are targeted, manufacturing receives the most attention~\cite{yang2025design,li2025endtoend}, followed by logistics and transportation~\cite{le2025crisis,rajesh2025smartops}, agriculture~\cite{nayal2022exploring}, e-commerce and contract logistics~\cite{adom2025design}, and multi-sector contexts including pharmaceuticals, food, and semiconductors~\cite{lin2025generative}. Fernando et al.~\cite{fernando2024covid} additionally cover manufacturing, food, and healthcare supply chains within their pandemic-focused review. Energy and public sector supply chains remain entirely absent from the corpus, representing areas where AI-based risk management frameworks remain underdeveloped.
 
-\textit{Geographic distribution.} Indian institutions are affiliated with seven articles~\cite{deivaganesh2022future,deivaganesh2022supply,farzhana2025hybrid,gupta2025supplier,naz2022artificial,rajesh2025smartops,renuga2026ai}, constituting the most active national research community in the corpus. China contributes two articles~\cite{yang2024building,yang2025design} and Vietnam two articles~\cite{le2025crisis,nguyen2024federated}, with the remaining studies originating from multi-institutional collaborations across Taiwan, Japan, Jordan, the United Kingdom, France, and Brazil. Primary contributions from North America and continental Europe are absent, despite these regions' substantial supply chain research traditions.
+\textit{Geographic distribution.} India is the most represented country in the corpus, with ten articles affiliated with Indian institutions, either solely or in multi-country collaborations~\cite{renuga2026ai,aldehayyat2025applying,deivaganesh2022future,deivaganesh2022supply,farzhana2025hybrid,gupta2025supplier,kumar2023enhancing,nayal2022exploring,naz2022artificial,rajesh2025smartops}. China contributes two articles~\cite{yang2024building,yang2025design} and Vietnam two articles~\cite{le2025crisis,nguyen2024federated}. Further contributions originate from Australia~\cite{nimmy2022explainability}, Taiwan and Japan~\cite{lin2025generative}, Malaysia and Indonesia~\cite{fernando2024covid}, and a multi-country collaboration spanning the United Kingdom, Ghana, and the United States~\cite{adom2025design}. Li et al.~\cite{li2025endtoend} represent a collaboration across the United States, United Kingdom, and Germany. Primary contributions from North American and continental European institutions as lead affiliations are largely absent, despite these regions' substantial supply chain research traditions.
 
-\textit{Temporal evolution.} Publication volume increases steadily from two articles in 2022 to four in 2025, with one article already slated for 2026, confirming a clear upward trajectory. The COVID-19 pandemic serves as the principal inflection point, with the most technically sophisticated contributions (deploying LLMs, multi-agent systems, and advanced hybrid architectures) concentrated in 2025.
+\textit{Temporal evolution.} The corpus spans the period from 2022 to 2026, with five articles published in 2022, one in 2023, three in 2024, nine in 2025, and one in 2026, confirming a clear upward trajectory in publication volume. The COVID-19 pandemic serves as the principal inflection point, with the most technically sophisticated contributions (deploying LLMs, multi-agent systems, and advanced hybrid architectures) concentrated in 2025 and 2026.
