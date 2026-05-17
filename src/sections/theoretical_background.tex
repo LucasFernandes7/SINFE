@@ -1,1 +1,112 @@
 \section{Theoretical Background}
+
+This section establishes the conceptual foundations on which the review rests,
+covering the contemporary challenges of supply chain management, the main
+risk categories recurring across the literature, and the AI techniques most
+relevant to the studies examined.
+ 
+\subsection{Supply Chain Management: Scope and Contemporary Challenges}
+ 
+Supply Chain Management (SCM) encompasses the coordination of activities
+involved in sourcing raw materials, transforming them into finished goods, and
+delivering them to end customers, together with the management of material,
+information, and financial flows that support these processes. For much of the
+2000s, lean management was the dominant paradigm: reducing inventory
+buffers, rationalising supplier bases, and optimising for cost. These principles
+delivered genuine efficiency gains but created systemic fragility that went
+largely unnoticed until disruptions struck at scale.
+ 
+The COVID-19 pandemic exposed this fragility with particular severity.
+Manufacturing firms dependent on single-source strategies found themselves
+unable to absorb even brief supply shocks, with shortages persisting well into
+2021. Similar dynamics had emerged after the 2011 Tohoku earthquake and
+the 2021 Suez Canal blockage. These repeated crises accelerated a conceptual
+shift already visible in the academic literature, with researchers arguing that
+supply chains need to be designed not merely for efficiency but for
+\emph{resilience}, the capacity to anticipate disruptions, absorb their
+impact, and recover within a reasonable timeframe, and, in the case of
+prolonged crises, for \emph{viability}, meaning the capacity to adapt
+structurally rather than simply return to a prior steady state.
+ 
+The globalisation of supply chains has also introduced a complexity that
+compounds these vulnerabilities. Modern value networks typically span
+multiple supplier tiers, logistics intermediaries, and regulatory environments
+across continents. Interdependencies between nodes mean that a disruption at
+one point can propagate rapidly through the network, the so-called
+\emph{ripple effect}, making containment one of the central problems to
+which AI-based approaches are being applied.
+ 
+\subsection{Supply Chain Risk: Categories and Taxonomy}
+ 
+Supply chain risk is broadly understood as the potential for an event to
+disrupt material, information, or financial flows in ways that harm
+organisational performance. This review adopts a multi-category taxonomy
+drawing on the typologies most frequently appearing across the included
+studies.
+ 
+\textbf{Supplier risk} refers to the possibility that a supplier will fail to
+deliver inputs on time, at the required quantity, or quality level, and
+encompasses financial instability, capacity constraints, and geographic
+concentration. \textbf{Demand risk} arises from uncertainty in customer
+orders, including the well-documented bullwhip effect whereby small retail
+fluctuations are amplified into large upstream production swings.
+\textbf{Disruption risk} covers low-frequency, high-impact external events,
+pandemics, natural disasters, geopolitical conflicts, port closures, that
+are poorly represented in historical data. \textbf{Operational risk}
+encompasses internally originating failures such as equipment breakdowns,
+process errors, and IT system failures. \textbf{Financial and fraud risk},
+including payment defaults and invoice manipulation, receives comparatively
+less attention in the corpus but is identified as a clear use case for
+explainable AI. Two further categories, environmental and sustainability
+risk and cybersecurity risk, are of growing prominence in the broader
+literature, though they remain underrepresented in this corpus.
+ 
+\subsection{Artificial Intelligence in Supply Chain Management}
+ 
+Artificial intelligence, in the context of this review, denotes computational
+methods that enable systems to learn from data, detect patterns, and support
+or automate decisions. The corpus reflects a broad methodological spectrum.
+ 
+\textbf{Traditional machine learning}, including Random Forest, Support
+Vector Machines, and gradient boosting methods such as XGBoost and
+LightGBM, remains the most prevalent approach, valued for its robustness on
+structured tabular data and its interpretability relative to deeper
+architectures. Unsupervised methods, particularly K-Means clustering, are
+applied to supplier segmentation and anomaly detection.
+ 
+\textbf{Deep learning} architectures, foremost Long Short-Term Memory
+networks (LSTM) and Gated Recurrent Units (GRU), are applied to demand
+forecasting, disruption prediction, and time-series anomaly detection.
+Hybrid architectures combining LSTMs with Graph Neural Networks (GNNs)
+model both the temporal evolution of risk indices and the structural
+relationships between supply chain nodes. One notable study develops a
+sequence-to-disruption architecture integrating bidirectional GRUs with
+transformer-style attention, achieving prediction errors under 20~days for
+six-month-ahead shortage forecasts on a dataset of 10,000 automotive
+components.
+ 
+\textbf{Graph Neural Networks} operate on graph-structured supply chain
+data, learning how disruptions propagate through network topology. One
+reviewed framework constructs a supply chain knowledge graph with over
+2.5~million entities and eleven relationship types to support real-time risk
+monitoring and recovery decisions.
+ 
+\textbf{Natural language processing} enables structured information to be
+extracted from unstructured text. Applications include sentiment analysis of
+social media streams for real-time early warning and named entity recognition
+pipelines applied to longitudinal news archives for risk categorisation.
+ 
+\textbf{Explainable AI (XAI)}, particularly SHAP (SHapley Additive
+Explanations), addresses the interpretability deficit of complex models. Its
+adoption reflects a practical imperative: supply chain risk decisions carry
+significant operational and financial consequences, requiring not only
+accurate predictions but transparent justifications that managers can
+interrogate and audit.
+ 
+\textbf{Federated machine learning} addresses the competitive and regulatory
+barriers to centralising sensitive supplier performance data by allowing
+organisations to collaboratively train shared risk models without raw data
+leaving individual servers. Studies in the corpus indicate that federated
+models achieve performance close to centralised counterparts while preserving
+data privacy, a trade-off particularly attractive for small and medium-sized
+enterprises.
